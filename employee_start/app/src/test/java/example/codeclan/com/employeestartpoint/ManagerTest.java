@@ -17,6 +17,9 @@ public class ManagerTest {
        manager = new Manager(1, "Mags", "AB123456C", 30000.00, "Human Resources");
     }
 
-
+    @Test
+    public void canGetDeptName() {
+        assertEquals("Human Resources", manager.getDeptName());
+    }
 
 }
