@@ -5,12 +5,12 @@ package example.codeclan.com.employeestartpoint;
  */
 
 public class Employee {
-    public int id;
-    public String name;
-    public String socialSecurityNumber;
-    public double salary;
+    private int id;
+    private String name;
+    private String socialSecurityNumber;
+    private double salary;
 
-    private Employee(int id, String name, String socialSecurityNumber, double salary) {
+    public Employee(int id, String name, String socialSecurityNumber, double salary) {
         this.id = id;
         this.name = name;
         this.socialSecurityNumber = socialSecurityNumber;
@@ -39,5 +39,9 @@ public class Employee {
         return socialSecurityNumber;
     }
 
+    public double raiseSalary(double increment) {
+        return this.salary += increment;
+
+    }
 
 }
