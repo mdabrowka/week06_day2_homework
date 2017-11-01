@@ -10,6 +10,8 @@ public class Employee {
     private String socialSecurityNumber;
     private double salary;
 
+    //constructor = like initialize//
+
     public Employee(int id, String name, String socialSecurityNumber, double salary) {
         this.id = id;
         this.name = name;
@@ -39,9 +41,10 @@ public class Employee {
         return socialSecurityNumber;
     }
 
-    public double raiseSalary(double increment) {
-        return this.salary += increment;
-
+    public void raiseSalary(double increment) { //void is fine here as you don't need to return anything!!!//
+        if (increment > 0) {
+            this.salary += increment;
+        }
     }
 
 }
